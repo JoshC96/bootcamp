@@ -1,0 +1,1 @@
+$configFiles = Get-ChildItem . *.html -rec foreach ($file in $configFiles){(Get-Content $file.PSPath) | Foreach-Object { $_ -replace "http://localhost/", "http://nightfallstudios.com.au/" } | Set-Content $file.PSPath}   
